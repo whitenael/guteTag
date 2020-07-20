@@ -1,0 +1,154 @@
+body {
+    background: black;
+    color: rgb(15, 8, 8);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    background-color: #4CAF50;
+    border:none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+header{
+    background: rgb(201, 170, 175);;
+    color:white;
+    padding: 10px;
+    text-align: center;
+}
+
+header .logo a{
+    background-image: url("../images/logo.png");
+    background-size: 130px;
+    background-repeat: no-repeat;
+    display:inline-block;
+    width:130px;
+    height:100px;
+    text-indent: -999999px;
+    position: relative;
+    top:-15px;
+    text-align:center;
+  
+}
+
+.features {
+    margin: auto;
+    color:rgb(201, 170, 175);
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: small;
+
+}
+
+.feature-box div{
+    padding: 15px;
+    text-align:center;
+    font-size: small;
+}
+
+.feature-box div:hover{
+
+    cursor: pointer;
+    background: black;
+    opacity:20%;
+}
+
+.features figure img {
+    background-size: 100%;
+    width: 100px;
+    border-radius: 80%;
+    box-shadow: grey 0px 0px 10px;
+}
+
+.features:hover{
+    cursor: pointer;
+}
+
+.feature-box.songs{
+    background: white;
+    color: rgb(201, 170, 175);
+    background-image:url("../images/Photo by Anderson Rian on Unsplash.jpg");
+    background-size:250%;
+    background-repeat: no-repeat;
+}
+
+.feature-box.albums{
+    display:block;
+    padding: 50px;
+    background: rgb(201, 170, 175);
+    color: white;   
+    height: 200px;
+    text-align: center;
+
+}
+
+.feature-box.tools {
+    display:block;
+    padding: 70px;
+    background-image: url("../images/Photo\ by\ Tim\ Mossholder\ on\ Unsplash.jpg");
+    background-size: 150%;
+    background-repeat: no-repeat;
+    color: white;
+    
+}
+
+footer{
+    background:rgb(226, 151, 164);
+    color:white;
+    padding: 20px;
+}
+
+footer.footerinfo {
+    color: white;
+    text-align: center;
+    font-size: small;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration:none;
+    cursor: pointer;
+    color:grey;
+}
+
+
+#colour{
+    color:none;
+}
+
+li:first-child{
+    background: none;
+}
+
+li:last-child{
+    background: none;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+}
+
+li{
+    display: inline-block;
+    margin: 5px 5px 5px 20px;
+}
+/*responsive rules*/
+
