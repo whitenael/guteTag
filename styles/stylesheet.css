@@ -27,6 +27,18 @@ header .logo a {
     text-indent: -999999px;
 }
 
+header .logo a:hover {
+    background-image: url("../images/logo-mainpage-hover.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    display:flex;
+    width:100px;
+    height:80px;
+    position: relative;
+    bottom: 8px;
+    text-indent: -999999px;
+}
+
 .headerimg figure {
     padding: 0;
     margin: 0;
@@ -89,3 +101,11 @@ footer ul li {
     padding: 5px;
     margin-top: -30px;
 }
+
+footer ul li:hover {
+    color: lightslategrey;
+    cursor: pointer;
+}
+
+/* responsive design */
+
