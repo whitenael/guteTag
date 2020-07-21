@@ -54,8 +54,12 @@ nav a {
     margin: 30px;
 }
 
+nav a:hover {
+    color:lightslategrey;
+}
+
 .content {
-    width: 50%;
+    width: 70%;
     margin: auto;
 }
 .content h2 {
