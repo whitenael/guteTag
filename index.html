@@ -20,15 +20,30 @@
         </header>
         <section class="headerimg">
             <figure>
-                <img src="../images/main page/header-background-lower.jpg" alt="image">
+                <img src="../images/main-page/header-background-yellow.jpg" alt="image">
             </figure>
         </section>
         <main class="content">
-            <h2>guteTag</h2>
-            <p>               
-                
-            </p> 
-          
+            <h2>Quienes Somos</h2>            
+            <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Fusce orci magna, vehicula vel rutrum et, sollicitudin eu enim. 
+                    Vivamus eu neque tellus. Pellentesque maximus lacus sed dui venenatis, in convallis mauris vehicula. 
+                    Maecenas a lacus ac dui vulputate faucibus a quis lacus. Sed faucibus nisi at libero faucibus, nec placerat metus lacinia. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget orci fermentum erat posuere euismod id venenatis orci. 
+                    Donec eu iaculis nisl, placerat rhoncus nisi. Nam dapibus velit purus, ut sagittis elit malesuada et.
+            </p>
+      
+            
+            <div id = "slider">
+                <ul class="slides">
+                    <li class="slide"><img src="images/main-page/slider/slide1.jpg" alt=""></li>
+                    <li class="slide"><img src="images/main-page/slider/slide2.jpg" alt=""></li>
+                    <li class="slide"><img src="images/main-page/slider/slide3.jpg" alt=""></li>
+                    <li class="slide"><img src="images/main-page/slider/slide4.jpg" alt=""></li>
+                </ul>
+            </div>
+
         </main>
     </body>
 
@@ -41,7 +56,52 @@
         </ul>
     </footer>
 
-    <scripts id="slider">
+    <script src="scripts/jquery-3.5.1.js"></script>
 
-    </scripts>
+    <!--image slider-->
+    <script>
+            $(function() 
+         {   
+            var width = 1000;
+            var animateSpeed = 1000;
+            var pause = 3000;
+            var currentSlide = 1;
+            
+            //cache DOM
+            var $slider = $("#slider");
+            var $slideContainer = $slider.find(".slides");
+            var $slides = $slideContainer.find(".slide"); 
+
+            var interval;
+
+            function startSlider(){
+
+                interval = setInterval(function() 
+                {
+                $slideContainer.animate({"margin-left": "-="+width}, animateSpeed, function()
+                {
+                    currentSlide++;
+                    if (currentSlide === $slides.length + 1)
+                    {
+                        currentSlide = 1;
+                        $slideContainer.animate({"margin-left":"0"}, 800);
+                    }
+                });
+                }, pause);
+
+            }
+
+            function stopSlider ()
+            {
+                clearInterval (interval);
+            }
+
+            $slider.on("mouseenter", stopSlider).on("mouseleave",startSlider);
+
+            startSlider();
+
+            //listen to mousenter and pause
+            //resume on mouseleave
+         })
+    </script>
 </html>
