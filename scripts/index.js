@@ -1,5 +1,2 @@
-str = "Please visit Microsoft!"
-let userEntrace = prompt("Enter you name");
-let n = str.replace("Microsoft", userEntrace);
-
-alert(n);
+let b = 0;
+alert (Boolean(b));
